@@ -5,7 +5,7 @@ This package is useful for data encryption and decryption
 This package can be installed via composer
 
 ``` bash
-composer require thegiant/aes
+composer require thegiant/aes:dev-master@dev
 ```
 
 ## changelog

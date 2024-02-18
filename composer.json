@@ -1,9 +1,6 @@
 {
     "name": "thegiant/aes",
     "description": "This package used for encryption and decryption of system data",
-    "require": {
-        "php": "^7.3"
-    },
     "license": "MIT",
     "autoload": {
         "psr-4": {
