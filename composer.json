@@ -22,5 +22,10 @@
             ]
         }
     },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=thegiant-aes-helper --force"
+        ]
+    },
     "minimum-stability": "stable"
 }
