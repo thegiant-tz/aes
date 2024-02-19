@@ -1,29 +1,57 @@
+# thegiant/aes
+
 ## Description
+
 This package is useful for data encryption and decryption
 
 ## Installation
+
 This package can be installed via composer
 
-``` bash
-composer require thegiant/aes:dev-master@dev
+``` php
+composer require thegiant/aes
 ```
 
-## Usage - Example
+### Laravel >= 5.5
+
+The package is auto-discovered on 5.5 and up!
+
+### Laravel <= 5.4
+
+Add the service provider to the `providers` array in your `config/app.php` file:
+
 ```php
-<?php 
-use Thegiant/aes/AES;
+'providers' => [
+    // Other Laravel service providers...
 
-if (!function_exists('aes_decrypt')) {
-    function aes_decrypt($encrypted_data) {
-        return AES::decrypt($encrypted_data, env('AES_KEY'), env('AES_IV'));
-    }
-}
+    /*
+    * Package Service Providers...
+    */
+    Thegiant\Aes\AesServiceProvider::class,
 
-if (!function_exists('aes_encrypt')) {
-    function aes_encrypt($encrypted_data) {
-        return AES::encrypt($encrypted_data, env('AES_KEY'), env('AES_IV'));
-    }
-}
+    // Other package service providers...
+],
 ```
-## Changelog
-Please see [CHANGELOG](CHANGELOG.md) for more information
+
+Publish Usable Helpers
+
+```php
+php artisan vendor:publish --tag=thegiant-aes-helper --force
+```
+
+> Note: use `--force` to update the existing files.
+
+### Usage
+
+Create Encryption and Dencryption key in `.env file` with the following Variables
+
+`AES_KEY=`</br>
+`AES_IV=`
+
+## Contributions
+
+Contributions and feedback are welcome! Feel free to open an issue or submit a pull request on GitHub.
+
+## License
+
+This package is open-source software licensed under the [MIT] license.
