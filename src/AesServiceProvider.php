@@ -17,7 +17,7 @@ class AesServiceProvider extends ServiceProvider
         $basePath = __DIR__;
         $arrPublishable = [
             'thegiant-aes-helper' => [
-                "$basePath/publishable/Helpers" => app_path('Helpers'),
+                "$basePath/Publishables/Helpers" => app_path('Helpers'),
             ]
         ];
 
