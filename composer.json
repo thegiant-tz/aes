@@ -2,7 +2,7 @@
     "name": "thegiant/aes",
     "description": "This package used for encryption and decryption of system data",
     "require": {
-        "php": "^7.3"
+        "php": ">=5.5"
     },
     "license": "MIT",
     "autoload": {
@@ -15,5 +15,17 @@
             "name": "Shebyclassic2018"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thegiant\\Aes\\AesServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=thegiant-aes-helper --force"
+        ]
+    },
     "minimum-stability": "stable"
 }
