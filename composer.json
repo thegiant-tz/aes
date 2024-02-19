@@ -2,7 +2,8 @@
     "name": "thegiant/aes",
     "description": "This package used for encryption and decryption of system data",
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5", 
+        "browner12/helpers": "^3.3"
     },
     "license": "MIT",
     "autoload": {
