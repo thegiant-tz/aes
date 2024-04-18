@@ -8,7 +8,7 @@ This package is useful for data encryption and decryption
 
 This package can be installed via composer
 
-``` php
+```php
 composer require thegiant/aes
 ```
 

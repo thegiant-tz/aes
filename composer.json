@@ -1,5 +1,5 @@
 {
-    "name": "thegiant/aes",
+    "name": "thegiant/algorithms",
     "description": "This package used for encryption and decryption of system data",
     "require": {
         "php": ">=5.5", 
